@@ -9,6 +9,7 @@ public class ApplicationManager {
 	public Properties properties;
 	private ContactHelper contactHelper;
 	private ProcessHelper processHelper;
+	private AutoItHelper autoitHelper;
 	public  ApplicationManager(Properties properties) throws IOException{
 		this.properties = properties;
 		String command;
@@ -35,6 +36,13 @@ public class ApplicationManager {
 			processHelper=new ProcessHelper(this);
 						}
 				return processHelper;
+			}
+		public AutoItHelper getAutoItHelper() {
+		
+			if (autoitHelper==null){
+			autoitHelper=new AutoItHelper(this);
+						}
+				return autoitHelper;
 			}
 }
 

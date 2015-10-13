@@ -3,6 +3,7 @@ package com.example.tests;
 import java.io.File;
 import java.io.FileReader;
 import java.util.Properties;
+import java.util.Random;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -21,11 +22,21 @@ public class TestBase {
 		
 	   
 	  }
-	@AfterTest
+		public  String generateRandomString(){
+			Random rnd=new Random(); 
+			/*if (rnd.nextInt(3)==0) {
+				return " ";	
+				} else {*/
+				return "test"+ rnd.nextInt(7);
+				//}	
+		}
+		
+	}
+/*	@AfterTest
 	public void tearDown() throws Exception {
 		app.stop();
 	    
+}
+*/
 
-}
-}
 	
