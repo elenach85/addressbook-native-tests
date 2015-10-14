@@ -38,8 +38,8 @@ public class ContactHelper extends HelpersBase {
 
 	private void initContactCreation() {
 		manager.getAutoItHelper().winWaitAndActivate("AddressBook Portable","" , 5000)
-		.focus("TRbButton4")
-		.click("TRbButton4")
+		.focus("Add")
+		.click("Add")
 		.winWaitAndActivate("Add Contact","", 5000);
 		}
 	

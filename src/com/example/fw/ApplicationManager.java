@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class ApplicationManager {
 
-	public Properties properties;
+	private Properties properties;
 	private ContactHelper contactHelper;
 	private ProcessHelper processHelper;
 	private AutoItHelper autoitHelper;
@@ -44,5 +44,10 @@ public class ApplicationManager {
 						}
 				return autoitHelper;
 			}
-}
+		public String getProperty(String key) {
+			return properties.getProperty(key);
+		}
+	
+		}
+
 
